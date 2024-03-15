@@ -17,7 +17,7 @@ variable "container_memory" {
 variable "project_id" {
   type        = string
   description = "The name of the project"
-  default     = "unique-gcp-project-id"
+  default     = "dtc-de-zoomcamp-410523"
 }
 
 variable "region" {
@@ -71,5 +71,5 @@ variable "ssl" {
 variable "path_to_keyfile" {
   description = "Path to the keyfile containing GCP credentials."
   type        = string
-  default     = "/secrets/gcp/service_account_credentials"
+  default     = "gcp-dev/dtc-de-zoomcamp-410523-dee27776fa69.json"
 }
