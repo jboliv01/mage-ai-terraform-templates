@@ -143,13 +143,13 @@ resource "google_cloud_run_service" "run_service" {
         }
         volume_mounts {
           mount_path = "/secrets/gcp"
-          name       = "secrets-service_account_credentials"
+          name       = "secrets-de-capstone"
         }
       }
       volumes {
-        name = "secrets-service_account_credentials"
+        name = "secrets-de-capstone"
         secret {
-          secret_name  = "service_account_credentials"
+          secret_name  = "de-capstone"
           items {
             key  = "latest"
             path = "service_account_credentials"

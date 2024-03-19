@@ -1,7 +1,7 @@
 variable "app_name" {
   type        = string
   description = "Application Name"
-  default     = "mage-data-prep"
+  default     = "de-capstone-project"
 }
 
 variable "container_cpu" {
@@ -53,7 +53,7 @@ variable "database_password" {
 variable "docker_image" {
   type        = string
   description = "The Docker image url in the Artifact Registry repository to be deployed to Cloud Run"
-  default     = "region-docker.pkg.dev/project_id/repository_name/mageai"
+  default     = "us-east1-docker.pkg.dev/dtc-de-zoomcamp-410523/mage-docker/mageai"
 }
 
 variable "domain" {
@@ -63,7 +63,7 @@ variable "domain" {
 }
 
 variable "ssl" {
-  description = "Run load balancer on HTTPS and provision managed certificate with provided `domain`."
+  description = "Run load balancer on HTTPS and proviFsion managed certificate with provided `domain`."
   type        = bool
   default     = false
 }
@@ -71,5 +71,5 @@ variable "ssl" {
 variable "path_to_keyfile" {
   description = "Path to the keyfile containing GCP credentials."
   type        = string
-  default     = "gcp-dev/dtc-de-zoomcamp-410523-dee27776fa69.json"
+  default     = "/secrets/gcp/service_account_credentials"
 }
